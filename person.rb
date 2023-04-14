@@ -3,7 +3,7 @@ require './capitalizedecorator'
 require './trimmerdecorator'
 class Person < Nameable
   # creates a getter method for @id
-  attr_reader :id, rentals
+  attr_reader :id, :rentals
   # creates getter and setter methods for @name and @age
   attr_accessor :name, :age
 
