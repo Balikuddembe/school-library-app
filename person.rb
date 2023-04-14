@@ -1,4 +1,6 @@
 require './decorator'
+require './capitalizedecorator'
+require './trimmerdecorator'
 class Person < Nameable
   # creates a getter method for @id
   attr_reader :id
