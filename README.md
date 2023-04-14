@@ -68,7 +68,8 @@ cd school-library-app
 Run the program
 
 ```bash
-ruby person.rb
+irb
+require './person.rb'
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
