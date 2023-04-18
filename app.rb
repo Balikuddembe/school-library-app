@@ -13,7 +13,7 @@ class App
     @persons = []
     @rentals = []
   end
-  
+
   include PersonModule
   include BookModule
   include RentalModule

@@ -81,6 +81,11 @@ ruby main.rb
 - Twitter: [@BalixEmma](https://twitter.com/BalixEmma)
 - LinkedIn: [emmanuelbalikuddembe](https://www.linkedin.com/in/emmanuelbalikuddembe/)
 
+👤 **Jose Montoya**
+
+- GitHub: [@jmonto55](https://github.com/jmonto55)
+- LinkedIn: [jmontodev](https://www.linkedin.com/in/jmontodev/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
