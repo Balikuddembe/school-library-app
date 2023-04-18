@@ -2,7 +2,8 @@ require_relative './student'
 require_relative './teacher'
 require_relative './book'
 require_relative './rental'
-require_relative './person_module.rb'
+require_relative './person_module'
+require_relative './book_module'
 
 class App
   def initialize(option)
@@ -13,6 +14,7 @@ class App
   end
   
   include PersonModule
+  include BookModule
 
   # List all books.
   def list_books
@@ -27,17 +29,6 @@ class App
     @persons.each do |person|
       puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
-    @option.show_options
-  end
-
-  # Create a book.
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    @books.push(Book.new(title, author))
-    puts 'Book created successfully'
     @option.show_options
   end
 
