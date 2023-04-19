@@ -60,4 +60,14 @@ class App
       Book.new(book["title"], book["author"])
     end
   end
+
+  def load_persons
+    JSON.parse(File.read("data/persons.json")).map do |person|
+      if person["json_class"] == "Student"
+        Student.new(person["age"], person["name"], person["parent_permission"])
+      elsif person["json_class"] == "Teacher"
+        Teacher.new(person["age"], person["name"], person["parent_permission"])
+      end
+    end
+  end
 end
