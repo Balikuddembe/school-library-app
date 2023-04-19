@@ -5,11 +5,13 @@ require_relative './rental'
 require_relative './person_module'
 require_relative './book_module'
 require_relative './rental_module'
+require_relative './preserve/save_data'
+require 'json'
 
 class App
   def initialize(option)
     @option = option
-    @books = []
+    @books = load_books
     @persons = []
     @rentals = []
   end
@@ -17,6 +19,7 @@ class App
   include PersonModule
   include BookModule
   include RentalModule
+  include SaveModule
 
   # List all books.
   def list_books
@@ -43,5 +46,24 @@ class App
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
     end
     @option.show_options
+  end
+
+  def exit
+    puts 'Thank you for using the app!'
+    save_data
+  end
+
+  private
+
+  def load_books
+    JSON.parse(File.read('data/books.json')).map do |book|
+      Book.new(book["title"], book["author"])
+    end
+  end
+
+  def load_rentals
+    JSON.parse(File.read('data/reantal.json')).map do |rental|
+      Rental.new(rental.book, rental.person)
+    end
   end
 end
