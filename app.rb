@@ -56,19 +56,21 @@ class App
   private
 
   def load_books
+    return [] unless File.exist?('data/books.json')
+
     JSON.parse(File.read('data/books.json')).map do |book|
-      Book.new(book["title"], book["author"])
+      Book.new(book['title'], book['author'])
     end
   end
 
   def load_persons
-    return [] unless File.exists?("data/persons.json")
+    return [] unless File.exist?('data/persons.json')
 
-    JSON.parse(File.read("data/persons.json")).map do |person|
-      if person["json_class"] == "Student"
-        Student.new(person["age"], person["name"], person["parent_permission"])
-      elsif person["json_class"] == "Teacher"
-        Teacher.new(person["age"], person["name"], person["parent_permission"])
+    JSON.parse(File.read('data/persons.json')).map do |person|
+      if person['json_class'] == 'Student'
+        Student.new(person['age'], person['name'], person['parent_permission'])
+      elsif person['json_class'] == 'Teacher'
+        Teacher.new(person['age'], person['name'], person['parent_permission'])
       end
     end
   end

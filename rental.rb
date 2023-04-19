@@ -19,5 +19,4 @@ class Rental
       book: @book.to_hash
     }
   end
-
 end
