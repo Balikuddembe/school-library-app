@@ -1,1 +1,1 @@
-[{"id":511,"name":"Jose","age":"20","parent_permission":true,"rentals":[],"json_class":"Student"},{"id":365,"name":"Ana","age":"30","parent_permission":true,"rentals":[],"json_class":"Teacher"}]
+[{"id":87,"name":"Jose","age":"20","parent_permission":true,"rentals":[],"class":"Student"},{"id":928,"name":"Ana","age":"30","parent_permission":true,"rentals":[],"class":"Teacher"}]
