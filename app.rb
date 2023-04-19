@@ -55,6 +55,14 @@ class App
 
   private
 
+  def load_rentals
+    return [] unless File.exist?('data/rentals.json')
+
+    JSON.parse(File.read('data/rentals.json')).map do |rental|
+      Rental.new(rental['date'], rental.book, rental.person)
+    end
+  end
+
   def load_books
     return [] unless File.exist?('data/books.json')
 
@@ -68,9 +76,13 @@ class App
 
     JSON.parse(File.read('data/persons.json')).map do |person|
       if person['class'] == 'Student'
-        Student.new(person['age'], person['name'], person['parent_permission'])
+        new_student = Student.new(person['age'], person['name'], person['parent_permission'])
+        new_student.id = person['id']
+        new_student
       elsif person['class'] == 'Teacher'
-        Teacher.new(person['age'], person['name'], person['parent_permission'])
+        new_teacher = Teacher.new(person['age'], person['name'], person['parent_permission'])
+        new_teacher.id = person['id']
+        new_teacher
       end
     end
   end

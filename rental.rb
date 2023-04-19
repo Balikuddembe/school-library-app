@@ -15,8 +15,8 @@ class Rental
   def to_hash
     {
       date: @date,
-      person: @person.to_hash,
-      book: @book.to_hash
+      person: @person,
+      book: @book
     }
   end
 end
