@@ -16,6 +16,17 @@ class Person < Nameable
     super()
   end
 
+  def to_hash
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      parent_permission: @parent_permission,
+      rentals: @rentals.map(&:to_hash),
+      json_class: self.class.name
+    }
+  end
+
   def can_use_services?
     of_age? || @parent_permission
   end

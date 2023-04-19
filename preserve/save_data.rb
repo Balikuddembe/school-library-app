@@ -1,11 +1,12 @@
-require 'json'
-
 module SaveModule
   def save_data
-    File.open('data/books.json', 'w') { |file| file.write JSON.generate(@books) }
+    books_data = @books.map(&:to_hash)
+    File.open('data/books.json', 'w') { |file| file.write JSON.generate(books_data) }
 
-    File.open('data/persons.json', 'w') { |file| file.write JSON.generate(@persons) }
+    persons_data = @persons.map(&:to_hash)
+    File.open('data/persons.json', 'w') { |file| file.write JSON.generate(persons_data) }
 
-    File.open('data/rentals.json', 'w') { |file| file.write JSON.generate(@rentals) }
+    rentals_data = @rentals.map(&:to_hash)
+    File.open('data/rentals.json', 'w') { |file| file.write JSON.generate(rentals_data) }
   end
 end

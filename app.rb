@@ -12,7 +12,7 @@ class App
   def initialize(option)
     @option = option
     @books = load_books
-    @persons = []
+    @persons = load_persons
     @rentals = []
   end
 
@@ -58,12 +58,6 @@ class App
   def load_books
     JSON.parse(File.read('data/books.json')).map do |book|
       Book.new(book["title"], book["author"])
-    end
-  end
-
-  def load_rentals
-    JSON.parse(File.read('data/reantal.json')).map do |rental|
-      Rental.new(rental.book, rental.person)
     end
   end
 end
