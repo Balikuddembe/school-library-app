@@ -50,6 +50,7 @@ class App
 
   def exit
     puts 'Thank you for using the app!'
+    puts @rentals
     save_data
   end
 

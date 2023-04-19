@@ -1,1 +1,18 @@
-[{"title":"harry potter","author":"JK Rowlling"},{"title":"test","author":"JK Rowlling test"},{"title":"working","author":"works"},{"title":"test2","author":"test22"}]
+[
+  {
+    "title": "harry potter",
+    "author": "JK Rowlling"
+  },
+  {
+    "title": "test",
+    "author": "JK Rowlling test"
+  },
+  {
+    "title": "working",
+    "author": "works"
+  },
+  {
+    "title": "test2",
+    "author": "test22"
+  }
+]
