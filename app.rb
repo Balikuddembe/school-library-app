@@ -62,6 +62,8 @@ class App
   end
 
   def load_persons
+    return [] unless File.exists?("data/persons.json")
+
     JSON.parse(File.read("data/persons.json")).map do |person|
       if person["json_class"] == "Student"
         Student.new(person["age"], person["name"], person["parent_permission"])
