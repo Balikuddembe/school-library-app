@@ -6,7 +6,9 @@ module SaveModule
     persons_data = @persons.map(&:to_hash)
     File.write('data/persons.json', JSON.pretty_generate(persons_data))
 
-    rentals_data = @rentals.map(&:to_hash)
+    rentals_data = @rentals.map do |rental|
+      rental.to_hash
+    end
     File.write('data/rentals.json', JSON.pretty_generate(rentals_data))
   end
 end

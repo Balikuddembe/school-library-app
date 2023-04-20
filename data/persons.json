@@ -5,7 +5,18 @@
     "age": "20",
     "parent_permission": true,
     "rentals": [
-
+      {
+        "date": "50",
+        "person": {
+          "id": 102,
+          "name": "Jose",
+          "age": "20"
+        },
+        "book": {
+          "title": "test",
+          "author": "JK Rowlling test"
+        }
+      }
     ],
     "class": "Student"
   },
@@ -15,7 +26,18 @@
     "age": "30",
     "parent_permission": true,
     "rentals": [
-
+      {
+        "date": "20",
+        "person": {
+          "id": 985,
+          "name": "Ana",
+          "age": "30"
+        },
+        "book": {
+          "title": "harry potter",
+          "author": "JK Rowlling"
+        }
+      }
     ],
     "class": "Teacher"
   }

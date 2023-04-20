@@ -50,7 +50,6 @@ class App
 
   def exit
     puts 'Thank you for using the app!'
-    puts @rentals
     save_data
   end
 
@@ -60,7 +59,7 @@ class App
     return [] unless File.exist?('data/rentals.json')
 
     JSON.parse(File.read('data/rentals.json')).map do |rental|
-      Rental.new(rental['date'], rental.book, rental.person)
+      Rental.new(rental['date'], rental['book'], rental['person'])
     end
   end
 
