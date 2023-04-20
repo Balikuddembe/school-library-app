@@ -13,7 +13,7 @@ class App
     @option = option
     @books = load_books
     @persons = load_persons
-    @rentals = []
+    @rentals = load_rentals
   end
 
   include PersonModule
@@ -57,10 +57,6 @@ class App
 
   def load_rentals
     return [] unless File.exist?('data/rentals.json')
-
-    JSON.parse(File.read('data/rentals.json')).map do |rental|
-      Rental.new(rental['date'], rental['book'], rental['person'])
-    end
   end
 
   def load_books

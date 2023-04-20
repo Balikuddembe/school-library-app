@@ -1,26 +1,41 @@
 [
   {
-    "date": "50",
+    "date": "200",
     "person": {
-      "id": 102,
-      "name": "Jose",
-      "age": "20"
+      "id": 244,
+      "name": "Ana",
+      "age": "30",
+      "class": "Teacher"
     },
     "book": {
-      "title": "test",
-      "author": "JK Rowlling test"
+      "title": "Harry Potter",
+      "author": "J.K. Rowlling"
     }
   },
   {
-    "date": "20",
+    "date": "300",
     "person": {
-      "id": 985,
+      "id": 244,
       "name": "Ana",
-      "age": "30"
+      "age": "30",
+      "class": "Teacher"
     },
     "book": {
-      "title": "harry potter",
-      "author": "JK Rowlling"
+      "title": "Harry Potter",
+      "author": "J.K. Rowlling"
+    }
+  },
+  {
+    "date": "500",
+    "person": {
+      "id": 195,
+      "name": "Jose",
+      "age": "20",
+      "class": "Student"
+    },
+    "book": {
+      "title": "Lord of the rings",
+      "author": "Tolkien"
     }
   }
 ]

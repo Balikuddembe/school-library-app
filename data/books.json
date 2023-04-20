@@ -1,18 +1,14 @@
 [
   {
-    "title": "harry potter",
-    "author": "JK Rowlling"
+    "title": "Harry Potter",
+    "author": "J.K. Rowlling"
   },
   {
-    "title": "test",
-    "author": "JK Rowlling test"
+    "title": "Lord of the rings",
+    "author": "Tolkien"
   },
   {
-    "title": "working",
-    "author": "works"
-  },
-  {
-    "title": "test2",
-    "author": "test22"
+    "title": "The great book",
+    "author": "Sr author"
   }
 ]
