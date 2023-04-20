@@ -3,9 +3,9 @@ require './capitalizedecorator'
 require './trimmerdecorator'
 class Person < Nameable
   # creates a getter method for @id
-  attr_reader :id, :rentals
+  attr_reader :rentals
   # creates getter and setter methods for @name and @age
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     @id = Random.rand(1..1000)
@@ -14,6 +14,17 @@ class Person < Nameable
     @parent_permission = parent_permission
     @rentals = []
     super()
+  end
+
+  def to_hash
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      parent_permission: @parent_permission,
+      rentals: @rentals.map(&:to_hash),
+      class: self.class.name
+    }
   end
 
   def can_use_services?

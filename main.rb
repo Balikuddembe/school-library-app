@@ -44,8 +44,4 @@ def main
   Options.new
 end
 
-def exit
-  puts 'Thank you for using the app!'
-end
-
 main

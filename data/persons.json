@@ -1,0 +1,22 @@
+[
+  {
+    "id": 195,
+    "name": "Jose",
+    "age": "20",
+    "parent_permission": true,
+    "rentals": [
+
+    ],
+    "class": "Student"
+  },
+  {
+    "id": 244,
+    "name": "Ana",
+    "age": "30",
+    "parent_permission": true,
+    "rentals": [
+
+    ],
+    "class": "Teacher"
+  }
+]
