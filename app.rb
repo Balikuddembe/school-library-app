@@ -57,9 +57,10 @@ class App
 
   def load_rentals
     return [] unless File.exist?('data/rentals.json')
+
     JSON.parse(File.read('data/rentals.json')).map do |rental|
       book = Book.new(rental['book']['title'], rental['book']['author'])
-  end
+    end
   end
 
   def load_persons
