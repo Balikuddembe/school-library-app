@@ -70,6 +70,8 @@ class App
     end
   end
 
+  def load_books
+  end
   def load_persons
     return [] unless File.exist?('data/persons.json')
 
