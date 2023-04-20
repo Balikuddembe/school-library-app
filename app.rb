@@ -57,9 +57,16 @@ class App
 
   def load_rentals
     return [] unless File.exist?('data/rentals.json')
-
     JSON.parse(File.read('data/rentals.json')).map do |rental|
       book = Book.new(rental['book']['title'], rental['book']['author'])
+      if rental['person']['class'] == 'Teacher'
+        person = Teacher.new(rental['person']['age'], rental['person']['name'], 'software')
+      end
+      if rental['person']['class'] == 'Student'
+        person = Student.new(rental['person']['age'], rental['person']['name'], true)
+      end
+      person.id = rental['person']['id']
+      Rental.new(rental['date'], book, person)
     end
   end
 
