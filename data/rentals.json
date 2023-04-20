@@ -37,5 +37,18 @@
       "title": "Lord of the rings",
       "author": "Tolkien"
     }
+  },
+  {
+    "date": "20042023",
+    "person": {
+      "id": 244,
+      "name": "Ana",
+      "age": "30",
+      "class": "Teacher"
+    },
+    "book": {
+      "title": "Lord of the rings",
+      "author": "Tolkien"
+    }
   }
 ]
